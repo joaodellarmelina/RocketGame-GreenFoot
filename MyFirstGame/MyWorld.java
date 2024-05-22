@@ -22,7 +22,8 @@ public class MyWorld extends World
 
     private void init() {
         skyRock rocha = new skyRock();
-        addObject(rocha, 1000, 200); 
+        addObject(rocha, 1000, 200);
+        
         addObject(new myRocket(), 200, 200);
                   
         
