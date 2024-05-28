@@ -15,12 +15,13 @@ public class MyWorld extends World
      */
     public MyWorld()
     {    
-        super(600, 400, 1);
+        super(800, 550, 1);
         
         init();
     }
 
     private void init() {
+        Greenfoot.setWorld(new Startscreen());
         skyRock rocha = new skyRock();;
         
         addObject(rocha, 1000, 200);
