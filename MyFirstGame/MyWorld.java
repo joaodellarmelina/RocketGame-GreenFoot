@@ -21,11 +21,13 @@ public class MyWorld extends World
     }
 
     private void init() {
-        skyRock rocha = new skyRock();
+        skyRock rocha = new skyRock();;
+        
         addObject(rocha, 1000, 200);
+        addObject(new coin(0), Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
         
         addObject(new myRocket(), 200, 200);
-                  
+                      
         
     }
 }

@@ -1,19 +1,28 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
 
-/**
- * Write a description of class coin here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class coin extends Actor
 {
-    /**
-     * Act - do whatever the coin wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    int levelAtual;
+    
     public void act()
     {
-        // Add your action code here.
+        List<myRocket> rocketList = (getWorld().getObjects(myRocket.class));
+        int coinsNumber = rocketList.get((rocketList.size() - 1)).pegueiCoin;
+        
+        if (isTouching(myRocket.class)) {
+            //getWorld().addObject(new coin(levelAtual), Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
+            setLocation(Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
+        }
+        
+        
     }
+    
+    coin(Integer level)
+    {
+        this.levelAtual = level;
+    }
+     
+    
 }
