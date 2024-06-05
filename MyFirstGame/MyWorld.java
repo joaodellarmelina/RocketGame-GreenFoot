@@ -22,7 +22,7 @@ public class MyWorld extends World
 
     private void init() {
         Greenfoot.setWorld(new Startscreen());
-        skyRock rocha = new skyRock(1);;
+        skyRock rocha = new skyRock(new Direction(-1, 0), 2);
         
         addObject(rocha, 1000, 200);
         addObject(new coin(0), Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));

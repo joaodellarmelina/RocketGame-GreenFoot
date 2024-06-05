@@ -32,9 +32,10 @@ public class myRocket extends Actor
       }
     
       if(isTouching(skyRock.class)) {
-            getWorld().showText("Voce perdeu");
+            getWorld().showText("Voce perdeu", 400, 200);
             Greenfoot.stop();   
-       }
+      }
+
       if (isTouching(coin.class)) {
           pegueiCoin++;
           getWorld().showText("Moedas:" + pegueiCoin, 400, 200);
