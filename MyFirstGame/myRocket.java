@@ -6,19 +6,21 @@ public class myRocket extends Actor
     int pegueiCoin = 0;
     public void act()
     {
-       if(Greenfoot.isKeyDown("W")) {
-           setLocation(getX(), getY() - velocidade);
-           velocidade += 0.2;
-       } else if (Greenfoot.isKeyDown("S")) {
-           setLocation(getX(), getY() + velocidade);
-           velocidade += 0.2;
-       }else if (Greenfoot.isKeyDown("D")) {
-           setLocation(getX() + velocidade, getY());
-           velocidade += 0.2;
-       }else if (Greenfoot.isKeyDown("A")) {
-           setLocation(getX() - velocidade, getY());
-           velocidade += 0.2;
-       }
+       if (Greenfoot.isKeyDown("D")){
+  turn(5);
+  }
+    
+      if (Greenfoot.isKeyDown("A")){
+  turn(-5);
+  }
+
+      if (Greenfoot.isKeyDown("W")){
+  move(5);
+  }
+
+      if (Greenfoot.isKeyDown("S")){ 
+  move(-5);
+  }
       if(isTouching(skyRock.class)) {
            Greenfoot.stop();   
        }
