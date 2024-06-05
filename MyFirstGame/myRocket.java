@@ -6,23 +6,34 @@ public class myRocket extends Actor
     int pegueiCoin = 0;
     public void act()
     {
-       if (Greenfoot.isKeyDown("D")){
-  turn(5);
-  }
+        setImage("rocket.png");
+        if (Greenfoot.isKeyDown("D")){
+              turn(5);
+      }
+        
+      
+        if (Greenfoot.isKeyDown("A")){
+              turn(-5);
+      }
     
-      if (Greenfoot.isKeyDown("A")){
-  turn(-5);
-  }
-
-      if (Greenfoot.isKeyDown("W")){
-  move(5);
-  }
-
-      if (Greenfoot.isKeyDown("S")){ 
-  move(-5);
-  }
+      
+        if (Greenfoot.isKeyDown("W")){
+              move(5);
+      }
+    
+      
+        if (Greenfoot.isKeyDown("S")){ 
+              move(-5);
+      }
+      
+        if (Greenfoot.isKeyDown("space")){ 
+              move(8);
+              setImage("rocket-run.png");
+      }
+    
       if(isTouching(skyRock.class)) {
-           Greenfoot.stop();   
+            getWorld().showText("Voce perdeu");
+            Greenfoot.stop();   
        }
       if (isTouching(coin.class)) {
           pegueiCoin++;
